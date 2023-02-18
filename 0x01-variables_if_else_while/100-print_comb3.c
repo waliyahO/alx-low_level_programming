@@ -1,34 +1,29 @@
 #include <stdio.h>
 
-/**
- * main - Prints numbers between 00 to 99.
- *
- * Return: Always 0 (Success)
- */
-int main(void)
+int main()
 {
-	int i, e;
-
-	i = 48;
-	e = 48;
-
-	while (e < 58)
-	{
-		i = 48;
-		while (i < 58)
-		{
-			putchar(e);
-			putchar(i);
-			if (i == 57 && e == 57)
-			{
-				break;
-			}
-			putchar(',');
-			putchar(' ');
-			i++;
-		}
-		e++;
-	}
-	putchar('\n');
-	return (0);
-}
+    //1
+    int i, j, k;
+    int arr[3];
+    //2
+    putchar("Enter the first number : ");
+    scanf("%d", &arr[0]);
+    putchar("Enter the second number : ");
+    scanf("%d", &arr[1]);
+    putchar("Enter the third number : ");
+    scanf("%d", &arr[2]);
+    //3
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            for (k = 0; k < 3; k++)
+            {
+                if (i != j && j != k && k != i)
+                {
+                    //4
+                    putchar("[%d %d %d]\n", arr[i], arr[j], arr[k]);
+                }
+            }
+        }
+    }
